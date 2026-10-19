@@ -1,0 +1,32 @@
+{
+  "name": "central-broker",
+  "version": "1.0.0",
+  "description": "Central Exam Broker command-and-control server",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "test": "vitest run",
+    "test:ws": "vitest run tests/ws.test.ts",
+    "test:state": "vitest run tests/state.test.ts",
+    "test:mirror": "vitest run tests/mirror.test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "@fastify/websocket": "^11.0.2",
+    "ws": "^8.18.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "@types/ws": "^8.5.14",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  }
+}
